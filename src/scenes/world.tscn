@@ -33,5 +33,7 @@ cell_size = Vector2( 32, 16 )
 format = 1
 tile_data = PoolIntArray( -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Characters" type="YSort" parent="."]
+
+[node name="Player" parent="Characters" instance=ExtResource( 1 )]
 position = Vector2( 128, 72 )

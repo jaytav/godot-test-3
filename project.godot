@@ -24,10 +24,20 @@ config/name="GodotTest3"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GroupController="*res://src/autoload/group_controller.gd"
+
 [display]
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
 
 [physics]
 
