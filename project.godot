@@ -9,13 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://src/entity/character/character.gd"
+}, {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
 "path": "res://src/state_machine/state.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://src/state_machine/state_machine.gd"
 } ]
 _global_script_class_icons={
-"State": ""
+"Character": "",
+"State": "",
+"StateMachine": ""
 }
 
 [application]
@@ -27,6 +39,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GroupController="*res://src/autoload/group_controller.gd"
+TurnController="*res://src/autoload/turn_controller.gd"
 
 [display]
 

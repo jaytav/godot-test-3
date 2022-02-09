@@ -26,7 +26,9 @@ position = Vector2( 128, 75 )
 current = true
 zoom = Vector2( 0.25, 0.25 )
 
-[node name="Floor" type="TileMap" parent="."]
+[node name="TileMaps" type="Node2D" parent="."]
+
+[node name="Floor" type="TileMap" parent="TileMaps"]
 mode = 1
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 16 )

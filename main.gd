@@ -14,3 +14,5 @@ func _ready() -> void:
 
     if not Engine.editor_hint:
         GroupController.add("Characters", get_node("World/Characters"))
+        GroupController.add("TileMaps", get_node("World/TileMaps"))
+        TurnController.init()

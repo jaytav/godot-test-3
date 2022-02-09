@@ -14,21 +14,16 @@ class Group:
             _children[child.name] = child
 
     func get(child_name: String) -> Node:
-        if not _children.has(child_name):
-            return null
+        return _children[child_name] if _children.has(child_name) else null
 
-        return _children[child_name]
-
+    func all() -> Array:
+        return _children.values()
+        
 
 func get(group_name: String) -> Group:
-    if not _groups.has(group_name):
-        return null
-
-    return _groups[group_name]
+    return _groups[group_name] if _groups.has(group_name) else null
 
 
 func add(group_name: String, parent: Node) -> void:
-    var group: Group = Group.new()
-    group.init(parent)
-
-    _groups[group_name] = group
+    _groups[group_name] = Group.new()
+    _groups[group_name].init(parent)

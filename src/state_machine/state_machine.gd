@@ -1,3 +1,4 @@
+class_name StateMachine
 extends Node
 
 signal transitioned(from_state, to_state)
