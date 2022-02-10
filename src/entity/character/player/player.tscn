@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/entity/character/player/states/active.gd" type="Script" id=1]
 [ext_resource path="res://src/entity/character/character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/entity/character/player/player.gd" type="Script" id=3]
 
 [node name="Player" groups=["PlayerControlled"] instance=ExtResource( 2 )]
+script = ExtResource( 3 )
 
 [node name="Active" parent="StateMachine" index="1"]
 script = ExtResource( 1 )
@@ -14,4 +16,4 @@ max_value = 2
 [node name="Sprite" parent="." index="3"]
 modulate = Color( 0.537255, 0.776471, 0.866667, 1 )
 
-[connection signal="turn_started" from="." to="Actions/Move" method="_on_Player_turn_started"]
+[connection signal="turn_started" from="." to="." method="_on_Player_turn_started"]

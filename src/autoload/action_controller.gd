@@ -1,5 +1,7 @@
 extends Node
 
+const TILE_PRIMARY = 0
+const TILE_SECONDARY = 1
 const NEGATIVE_VECTOR_POINT_INDEX_BUFFER = 999999
 
 var tile_map_action: TileMap
@@ -22,10 +24,9 @@ func refresh_astar_movement() -> void:
     for point in astar_movement.get_points():
         var cell: Vector2 = astar_movement.get_point_position(point)
         
-#        do Vector2.RIGHT/DOWN HERE
         var relative_cells: Array = [
-            Vector2(cell.x + 1, cell.y),
-            Vector2(cell.x, cell.y - 1),
+            cell + Vector2.RIGHT,
+            cell + Vector2.DOWN,
         ]
 
         for relative_cell in relative_cells:
