@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/entity/character/stat/bound_stat.gd" type="Script" id=1]
 [ext_resource path="res://src/entity/character/action/move.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/state_machine/state.gd" type="Script" id=5]
 [ext_resource path="res://src/entity/entity.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/textures/character.png" type="Texture" id=7]
+[ext_resource path="res://src/entity/character/status_effect/replenish_bound_stat.gd" type="Script" id=8]
 
 [node name="Character" instance=ExtResource( 6 )]
 script = ExtResource( 3 )
@@ -32,5 +33,11 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 _tile_map_action_modulate = Color( 0.756863, 1, 0.737255, 1 )
 
-[node name="Sprite" parent="." index="3"]
+[node name="StatusEffects" type="Node" parent="." index="3"]
+
+[node name="ReplenishActionPoints" type="Node" parent="StatusEffects" index="0"]
+script = ExtResource( 8 )
+_stat_path = NodePath("../../Stats/ActionPoints")
+
+[node name="Sprite" parent="." index="4"]
 texture = ExtResource( 7 )

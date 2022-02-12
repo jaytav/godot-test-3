@@ -3,6 +3,8 @@ extends Character
 onready var active_action: Action = get_node("Actions/Move")
 
 
-func _on_Player_turn_started(character: Character) -> void:
+func start_turn() -> void:
+    .start_turn()
+
     active_action.refresh_cells()
     active_action.draw_cells()

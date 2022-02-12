@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://src/state_machine/state_machine.gd"
+}, {
+"base": "Node",
+"class": "StatusEffect",
+"language": "GDScript",
+"path": "res://src/entity/character/status_effect/status_effect.gd"
 } ]
 _global_script_class_icons={
 "Action": "",
 "Character": "",
 "Stat": "",
 "State": "",
-"StateMachine": ""
+"StateMachine": "",
+"StatusEffect": ""
 }
 
 [application]
