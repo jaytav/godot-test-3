@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/entity/character/stat/bound_stat.gd" type="Script" id=1]
 [ext_resource path="res://src/entity/character/action/move.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://src/entity/entity.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/textures/character.png" type="Texture" id=7]
 [ext_resource path="res://src/entity/character/status_effect/replenish_bound_stat.gd" type="Script" id=8]
+[ext_resource path="res://src/entity/character/states/idle.gd" type="Script" id=9]
 
 [node name="Character" instance=ExtResource( 6 )]
 script = ExtResource( 3 )
@@ -17,7 +18,7 @@ script = ExtResource( 4 )
 _initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" index="0"]
-script = ExtResource( 5 )
+script = ExtResource( 9 )
 
 [node name="Active" type="Node" parent="StateMachine" index="1"]
 script = ExtResource( 5 )

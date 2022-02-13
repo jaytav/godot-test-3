@@ -14,8 +14,4 @@ func start_turn():
 
 func end_turn():
     _state_machine.transition_to_state("Idle")
-    
-    for status_effect in get_node("StatusEffects").get_children():
-        status_effect.do()
-
     emit_signal("turn_ended", self)

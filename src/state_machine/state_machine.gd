@@ -13,6 +13,7 @@ func _init() -> void:
 
 
 func _ready() -> void:
+    yield(owner, "ready")
     transition_to_state(_initial_state)
     
 
