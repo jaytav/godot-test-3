@@ -4,10 +4,13 @@ var _groups: Dictionary = {}
 
 
 class Group:
+    signal child_removed(child)
+    
     var _parent: Node
     var _children: Dictionary = {}
-
+    
     func init(parent: Node) -> void:
+        connect("child_removed", self, "_on_child_removed")
         _parent = parent
  
         for child in parent.get_children():
@@ -18,7 +21,10 @@ class Group:
 
     func all() -> Array:
         return _children.values()
-        
+
+    func _on_child_removed(child: Node) -> void:
+        _children.erase(child.name)
+
 
 func get(group_name: String) -> Group:
     return _groups[group_name] if _groups.has(group_name) else null

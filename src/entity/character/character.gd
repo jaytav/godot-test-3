@@ -14,12 +14,12 @@ func _ready() -> void:
         stat.connect("updated", self, "_on_stat_updated")
 
 
-func start_turn():
+func start_turn() -> void:
     _state_machine.transition_to_state("Active")
     emit_signal("turn_started", self)
 
 
-func end_turn():
+func end_turn() -> void:
     _state_machine.transition_to_state("Idle")
     emit_signal("turn_ended", self)
 
@@ -34,3 +34,7 @@ func _on_stat_updated(stat: Stat, from_value: int, to_value: int) -> void:
     floating_text.label_text = str(difference)
     floating_text.label_modulate = stat.modulate
     add_child(floating_text)
+
+    if stat.name == "HealthPoints" and to_value == 0:
+        GroupController.get("Characters").emit_signal("child_removed", self)
+        queue_free()

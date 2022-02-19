@@ -13,6 +13,6 @@ func start_turn() -> void:
 
 
 func end_turn() -> void:
-    .end_turn()
-    
     ActionController.tile_map_action.clear()
+
+    .end_turn()
