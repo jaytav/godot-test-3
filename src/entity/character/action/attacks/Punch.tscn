@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/entity/character/action/attacks/Attack.tscn" type="PackedScene" id=1]
+
+[node name="Punch" instance=ExtResource( 1 )]
+_relative_points = PoolVector2Array( 1, 0, -1, 0, 0, 1, 0, -1 )
+_action_point_cost = 1
+
+[node name="AttackEffect" parent="." index="0"]
+_relative_points = PoolVector2Array( 0, 0 )
+damage = 3

@@ -14,10 +14,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/entity/character/action/action.gd"
 }, {
+"base": "RelativePointsAction",
+"class": "AttackEffect",
+"language": "GDScript",
+"path": "res://src/entity/character/action/attacks/attack_effects/attack_effect.gd"
+}, {
 "base": "Node2D",
 "class": "Character",
 "language": "GDScript",
 "path": "res://src/entity/character/character.gd"
+}, {
+"base": "Action",
+"class": "RelativePointsAction",
+"language": "GDScript",
+"path": "res://src/entity/character/action/relative_points_action.gd"
 }, {
 "base": "Node",
 "class": "Stat",
@@ -41,7 +51,9 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Action": "",
+"AttackEffect": "",
 "Character": "",
+"RelativePointsAction": "",
 "Stat": "",
 "State": "",
 "StateMachine": "",
@@ -59,6 +71,7 @@ config/icon="res://icon.png"
 GroupController="*res://src/autoload/group_controller.gd"
 ActionController="*res://src/autoload/action_controller.gd"
 TurnController="*res://src/autoload/turn_controller.gd"
+AttackController="*res://src/autoload/attack_controller.gd"
 
 [display]
 

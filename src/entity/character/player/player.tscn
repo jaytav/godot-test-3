@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/entity/character/player/states/active.gd" type="Script" id=1]
 [ext_resource path="res://src/entity/character/character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entity/character/player/player.gd" type="Script" id=3]
+[ext_resource path="res://src/entity/character/action/attacks/Punch.tscn" type="PackedScene" id=4]
 
 [node name="Player" groups=["PlayerControlled"] instance=ExtResource( 2 )]
 script = ExtResource( 3 )
+_initial_active_action = NodePath("Actions/Punch")
 
 [node name="Active" parent="StateMachine" index="1"]
 script = ExtResource( 1 )
 
 [node name="ActionPoints" parent="Stats" index="0"]
 max_value = 3
+
+[node name="Punch" parent="Actions" index="1" instance=ExtResource( 4 )]
 
 [node name="Sprite" parent="." index="4"]
 modulate = Color( 0.537255, 0.776471, 0.866667, 1 )

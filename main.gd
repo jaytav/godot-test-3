@@ -16,4 +16,5 @@ func _ready() -> void:
         GroupController.add("Characters", get_node("World/Characters"))
         GroupController.add("TileMaps", get_node("World/TileMaps"))
         ActionController.init()
+        AttackController.init()
         TurnController.init()
