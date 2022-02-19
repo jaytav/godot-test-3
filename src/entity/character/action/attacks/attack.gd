@@ -3,6 +3,14 @@ extends RelativePointsAction
 export var _action_point_cost: int
 
 onready var _attack_effect: AttackEffect = get_node("AttackEffect")
+onready var _action_points: Stat = owner.get_node("Stats/ActionPoints")
+
+func refresh_cells() -> void:
+    if _action_points.value < _action_point_cost:
+        cells.clear()
+        return
+    
+    .refresh_cells()
 
 
 func draw_behaviour(cell: Vector2) -> void:
@@ -25,6 +33,8 @@ func do() -> void:
     if _attack_effect.active_cell == Vector2.ZERO:
         return
 
-    var character_action_points: Stat = owner.get_node("Stats/ActionPoints")
-    character_action_points.value -= _action_point_cost
+    _action_points.value -= _action_point_cost
     _attack_effect.do()
+
+    refresh_cells()
+    draw_cells()
