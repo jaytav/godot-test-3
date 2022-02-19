@@ -38,3 +38,5 @@ func _on_stat_updated(stat: Stat, from_value: int, to_value: int) -> void:
     if stat.name == "HealthPoints" and to_value == 0:
         GroupController.get("Characters").emit_signal("child_removed", self)
         queue_free()
+
+        ActionController.refresh_astar_movement()

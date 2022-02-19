@@ -7,7 +7,6 @@
 
 [node name="Player" groups=["PlayerControlled"] instance=ExtResource( 2 )]
 script = ExtResource( 3 )
-_initial_active_action = NodePath("Actions/Punch")
 
 [node name="Active" parent="StateMachine" index="1"]
 script = ExtResource( 1 )

@@ -7,13 +7,15 @@ onready var _attack_effect: AttackEffect = get_node("AttackEffect")
 
 func draw_behaviour(cell: Vector2) -> void:
     if !cells.has(cell):
+        active_cell = Vector2.ZERO
         _attack_effect.active_cell = Vector2.ZERO
         AttackController.tile_map.clear()
         return
 
-    if cell == _attack_effect.active_cell:
+    if cell == active_cell:
         return
 
+    active_cell = Vector2.ZERO
     _attack_effect.active_cell = cell
     _attack_effect.refresh_cells()
     _attack_effect.draw_cells()

@@ -23,5 +23,12 @@ func unhandled_input(event: InputEvent) -> void:
                     owner.active_action = actions[i + 1]
                 break
 
+        AttackController.tile_map.clear()
+        owner.active_action.active_cell = Vector2.ZERO
         owner.active_action.refresh_cells()
         owner.active_action.draw_cells()
+
+        var mouse_position: Vector2 = owner.get_global_mouse_position()
+        var action_cell: Vector2 = ActionController.tile_map_action.world_to_map(mouse_position)
+
+        owner.active_action.draw_behaviour(action_cell)
