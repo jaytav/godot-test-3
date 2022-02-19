@@ -23,7 +23,7 @@ func draw_behaviour(cell: Vector2) -> void:
     if cell == active_cell:
         return
 
-    active_cell = Vector2.ZERO
+    active_cell = cell
     _attack_effect.active_cell = cell
     _attack_effect.refresh_cells()
     _attack_effect.draw_cells()

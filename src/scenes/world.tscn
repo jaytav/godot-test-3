@@ -73,7 +73,6 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 128, 75 )
 current = true
-zoom = Vector2( 0.25, 0.25 )
 
 [node name="TileMaps" type="Node2D" parent="."]
 
