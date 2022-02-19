@@ -5,7 +5,7 @@ export var max_value: int
 
 
 func _ready() -> void:
-    if !initial_value:
+    if !_initial_value:
         value = max_value
 
 

@@ -15,6 +15,9 @@ script = ExtResource( 1 )
 [node name="ActionPoints" parent="Stats" index="0"]
 max_value = 3
 
+[node name="HealthPoints" parent="Stats" index="1"]
+max_value = 3
+
 [node name="Punch" parent="Actions" index="1" instance=ExtResource( 4 )]
 
 [node name="Sprite" parent="." index="4"]

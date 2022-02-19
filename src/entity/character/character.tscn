@@ -27,9 +27,11 @@ script = ExtResource( 5 )
 
 [node name="ActionPoints" type="Node" parent="Stats" index="0"]
 script = ExtResource( 1 )
+modulate = Color( 0.415686, 0.584314, 0.901961, 1 )
 
 [node name="HealthPoints" type="Node" parent="Stats" index="1"]
 script = ExtResource( 1 )
+modulate = Color( 0.882353, 0.415686, 0.415686, 1 )
 
 [node name="Actions" type="Node" parent="." index="2"]
 
