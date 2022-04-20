@@ -2,7 +2,7 @@ extends Node
 
 var _active_character: Character
 
-onready var _character_turn_queue: Array = []
+var _character_turn_queue: Array = []
 
 
 func init() -> void:

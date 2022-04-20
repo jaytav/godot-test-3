@@ -79,6 +79,7 @@ ActionController="*res://src/autoload/action_controller.gd"
 TurnController="*res://src/autoload/turn_controller.gd"
 AttackController="*res://src/autoload/attack_controller.gd"
 CameraController="*res://src/autoload/camera_controller.gd"
+GameController="*res://src/autoload/game_controller.gd"
 
 [display]
 

@@ -22,7 +22,7 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=4]
 0/name = "action.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -84,7 +84,7 @@ tile_data = PoolIntArray( -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -196600, 
 
 [node name="Action" type="TileMap" parent="TileMaps"]
 mode = 1
-tile_set = SubResource( 2 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 32, 16 )
 format = 1
 
