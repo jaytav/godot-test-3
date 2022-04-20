@@ -4,7 +4,7 @@ extends Node2D
 var label_text: String
 var label_modulate: Color
 
-onready var _label: Label = get_node("Label")
+onready var _label: Label = get_node("LabelContainer/Label")
 
 
 func _ready():

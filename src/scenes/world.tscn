@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/entity/character/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/textures/floor.png" type="Texture" id=2]
 [ext_resource path="res://assets/textures/action.png" type="Texture" id=3]
 [ext_resource path="res://assets/textures/action_secondary.png" type="Texture" id=4]
 [ext_resource path="res://src/entity/character/enemies/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/animations/floating_text.tscn" type="PackedScene" id=6]
 
 [sub_resource type="TileSet" id=1]
 0/name = "floor.png 0"
@@ -102,3 +103,6 @@ position = Vector2( 128, 72 )
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 5 )]
 position = Vector2( 144, 80 )
+
+[node name="FloatingText" parent="." instance=ExtResource( 6 )]
+position = Vector2( 147, 65 )
