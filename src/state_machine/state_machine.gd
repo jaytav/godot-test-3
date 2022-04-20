@@ -4,6 +4,7 @@ extends Node
 signal transitioned(from_state, to_state)
 
 export(NodePath) var _initial_state
+export(bool) var _debug
 
 var _active_state: State
 
@@ -43,7 +44,8 @@ func transition_to_state(state: String) -> void:
 
 
 func _on_StateMachine_transitioned(from_state: State, to_state: State) -> void:
-    if from_state:
-        print("%s.%s transitioned from %s to %s" % [owner.name, name, from_state.name, to_state.name])
-    else:
-        print("%s.%s transitioned to %s" % [owner.name, name, to_state.name])
+    if _debug:
+        if from_state:
+            print("%s.%s transitioned from %s to %s" % [owner.name, name, from_state.name, to_state.name])
+        else:
+            print("%s.%s transitioned to %s" % [owner.name, name, to_state.name])

@@ -6,3 +6,6 @@
 
 [node name="HealthPoints" parent="Stats" index="1"]
 max_value = 3
+
+[node name="Sprite" parent="." index="4"]
+modulate = Color( 1, 0.615686, 0.615686, 1 )
