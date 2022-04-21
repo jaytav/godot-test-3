@@ -22,5 +22,4 @@ func init(camera: Camera2D) -> void:
 
 
 func _on_character_turn_started(character: Character) -> void:
-    print(character.name + " started in camera")
     _follow_entity = character
