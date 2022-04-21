@@ -2,7 +2,7 @@ extends Node
 
 
 var _camera: Camera2D
-var _follow_speed: float = 100
+var _follow_speed: float = 200
 var _follow_entity: Node2D
 
 
