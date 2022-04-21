@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://src/animations/floating_text.gd" type="Script" id=2]
@@ -37,23 +37,30 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "FloatLoop"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2 ), Vector2( 0, -6 ), Vector2( 0, -2 ) ]
+}
+
 [node name="FloatingText" type="Node2D"]
 position = Vector2( 0, -2 )
 script = ExtResource( 2 )
 
-[node name="LabelContainer" type="Control" parent="."]
+[node name="Label" type="Label" parent="."]
 margin_left = -3.0
 margin_top = -11.0
-margin_right = 3.0
-margin_bottom = 1.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="LabelContainer"]
-margin_right = 7.0
-margin_bottom = 11.0
+margin_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = SubResource( 1 )
@@ -65,7 +72,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Float"
 anims/Float = SubResource( 2 )
+anims/FloatLoop = SubResource( 3 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
