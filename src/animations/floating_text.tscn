@@ -13,35 +13,35 @@ font_data = ExtResource( 1 )
 resource_name = "Float"
 length = 1.5
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -2 ), Vector2( 0, -12 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
+tracks/1/path = NodePath("Label:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Vector2( -3, -6 ), Vector2( -3, -14 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "FloatLoop"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("Label:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -50,7 +50,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -2 ), Vector2( 0, -6 ), Vector2( 0, -2 ) ]
+"values": [ Vector2( -3, -6 ), Vector2( -3, -10 ), Vector2( -3, -6 ) ]
 }
 
 [node name="FloatingText" type="Node2D"]
@@ -59,8 +59,9 @@ script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = -3.0
-margin_top = -11.0
+margin_top = -7.17178
 margin_right = 4.0
+margin_bottom = 3.82822
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = SubResource( 1 )

@@ -42,4 +42,7 @@ func do() -> void:
 
 
 func clear() -> void:
+    .clear()
+    
+    AttackController.tile_map.clear()
     _attack_effect.clear()

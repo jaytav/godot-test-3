@@ -5,7 +5,7 @@ export var _tile_map_action_modulate: Color
 
 var cells: Array
 var active_cell: Vector2
-
+var floating_texts: Array
 
 func refresh_cells() -> void:
     cells.clear()
@@ -28,4 +28,6 @@ func do() -> void:
 
 
 func clear() -> void:
-    pass
+    for floating_text in floating_texts:
+        floating_texts.erase(floating_text)
+        floating_text.queue_free()

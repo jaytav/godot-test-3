@@ -13,6 +13,7 @@ func _ready() -> void:
             instance.set_owner(get_tree().edited_scene_root)
 
     if not Engine.editor_hint:
+        GroupController.add("Main", self)
         GroupController.add("Characters", get_node("World/Characters"))
         GroupController.add("TileMaps", get_node("World/TileMaps"))
         CameraController.init(get_node("World/Camera2D"))
