@@ -8,10 +8,13 @@ func unhandled_input(event: InputEvent) -> void:
 
         owner.active_action.draw_behaviour(action_cell)
     elif event.is_action_pressed("left_click"):
-       owner.active_action.do()
+        owner.active_action.clear()
+        owner.active_action.do()
     elif event.is_action_pressed("ui_select"):
+        owner.active_action.clear()
         owner.end_turn()
     elif event.is_action_pressed("ui_focus_next"):
+        owner.active_action.clear()
         var active_action: Action = owner.active_action
         var actions: Array = owner.get_node("Actions").get_children()
 

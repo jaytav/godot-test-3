@@ -25,3 +25,7 @@ func draw_behaviour(cell: Vector2) -> void:
 
 func do() -> void:
     pass
+
+
+func clear() -> void:
+    pass

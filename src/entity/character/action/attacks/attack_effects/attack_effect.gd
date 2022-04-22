@@ -15,7 +15,7 @@ func refresh_cells() -> void:
 
 
 func draw_cells() -> void:
-    draw_clear()
+    clear()
 
     AttackController.tile_map.modulate = _tile_map_action_modulate
 
@@ -47,7 +47,7 @@ func do() -> void:
         character_health_points.value -= damage
 
 
-func draw_clear() -> void:
+func clear() -> void:
     AttackController.tile_map.clear()
     
     for floating_text in _floating_texts:

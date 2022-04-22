@@ -18,7 +18,7 @@ func draw_behaviour(cell: Vector2) -> void:
     if !cells.has(cell):
         active_cell = Vector2.ZERO
         _attack_effect.active_cell = Vector2.ZERO
-        _attack_effect.draw_clear()
+        clear()
         return
 
     if cell == active_cell:
@@ -39,3 +39,7 @@ func do() -> void:
 
     refresh_cells()
     draw_cells()
+
+
+func clear() -> void:
+    _attack_effect.clear()
